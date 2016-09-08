@@ -12,5 +12,5 @@ Driver.create(first_name: "juan", last_name: "juanson")
 Shuttle.create(shuttle_num: "666")
 Shuttle.create(shuttle_num: "200")
 
-Tracking.create(driver_id: 1, shuttle_id: 1, lat: "60.957664", lng: "-149.1562337", toSeward: true)
-Tracking.create(driver_id: 2, shuttle_id: 2, lat: "60.9668622", lng: "-149.1060145", toSeward: true)
+Tracking.create(driver_id: 1, shuttle_id: 1, lat: "60.957664", lng: "-149.1562337")
+Tracking.create(driver_id: 2, shuttle_id: 2, lat: "60.9668622", lng: "-149.1060145")

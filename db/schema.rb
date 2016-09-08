@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20160908191358) do
     t.integer  "shuttle_id"
     t.float    "lat"
     t.float    "lng"
-    t.boolean  "toSeward"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["driver_id"], name: "index_trackings_on_driver_id"

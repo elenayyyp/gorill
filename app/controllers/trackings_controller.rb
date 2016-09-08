@@ -10,7 +10,7 @@ class TrackingsController < ApplicationController
   end
 
   def create
-    new_tracking = Tracking.new(lat: params[:lat], lng: params[:lng], toSeward: params[:toSeward], driver_id: params[:driver_id], shuttle_id: params[:shuttle_id])
+    new_tracking = Tracking.new(lat: params[:lat], lng: params[:lng], driver_id: params[:driver_id], shuttle_id: params[:shuttle_id])
 
     if new_tracking.save
       render json: new_tracking
@@ -21,7 +21,7 @@ class TrackingsController < ApplicationController
 
   def update
     found_tracking  = Tracking.where(id: params[:id])
-    updated = found_tracking.update(lat: params[:new_lat], lng: params[:new_lng], toSeward: params[:new_toSeward], driver_id: params[:new_driver_id], shuttle_id: params[:shuttle_id])
+    updated = found_tracking.update(lat: params[:new_lat], lng: params[:new_lng], driver_id: params[:new_driver_id], shuttle_id: params[:shuttle_id])
 
     if updated
       render json: updated

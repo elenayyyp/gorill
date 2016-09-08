@@ -5,7 +5,6 @@ class CreateTrackings < ActiveRecord::Migration[5.0]
       t.references :shuttle
       t.float :lat
       t.float :lng
-      t.boolean :toSeward
       t.timestamps
     end
   end
