@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "/trackings" => "trackings#index"
   get "/trackings/:id" => "trackings#show"
   post "/trackings/new" => "trackings#create"
-  delete "/trackings/:id" => "trackings#destroy"
+  delete "/trackings/:shuttle_id" => "trackings#destroy"
   put "/trackings/:id" => "trackings#update"
 
 

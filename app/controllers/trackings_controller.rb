@@ -5,7 +5,7 @@ class TrackingsController < ApplicationController
   end
 
   def show
-    tracking = Tracking.where(tracking_num: params[:tracking_num])
+    tracking = Tracking.where(id: params[:id])
     render json: tracking
   end
 
@@ -31,7 +31,7 @@ class TrackingsController < ApplicationController
   end
 
   def destroy
-    removed = Tracking.delete_all(id: params[:id])
+    removed = Tracking.delete_all(shuttle_id: params[:shuttle_id])
     render json: {'Entry': removed}
   end
 end
